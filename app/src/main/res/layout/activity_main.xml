@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/seekBarPSLength"
+        style="@android:style/Widget.Material.SeekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:max="16"
+        android:min="1"
+        android:progress="5"
+        android:splitTrack="true"
+        app:layout_constraintStart_toStartOf="@+id/tvPWLength"
+        app:layout_constraintTop_toBottomOf="@+id/tvPWLength" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swCaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Capitals ? "
+        app:layout_constraintStart_toStartOf="@+id/seekBarPSLength"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPSLength" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swSC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Special characters ? "
+        app:layout_constraintStart_toStartOf="@+id/swCaps"
+        app:layout_constraintTop_toBottomOf="@+id/swCaps" />
+
+    <TextView
+        android:id="@+id/tvTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Passphrase Generator"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvOptionsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Options"
+        android:textColor="#999999"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleLabel" />
+
+    <TextView
+        android:id="@+id/tvPWLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:text="Passphrase length"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOptionsLabel" />
+
+    <TextView
+        android:id="@+id/tvPSLengthLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="5"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarPSLength"
+        app:layout_constraintStart_toEndOf="@+id/seekBarPSLength"
+        app:layout_constraintTop_toTopOf="@+id/seekBarPSLength" />
+
+    <EditText
+        android:id="@+id/etPassphraseHolder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Your passphrase"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swSC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
